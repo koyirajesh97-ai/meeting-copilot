@@ -140,7 +140,7 @@ infra/     Terraform for AWS
 - **Schema changes**: edit `app/models.py`, then `alembic -c alembic.ini revision --autogenerate -m "..."` and review the migration. API and worker run migrations at start-up; a Phase 1 database is upgraded in place.
 - **Run locally without Docker**: `make dev-api`, `make dev-worker`, `make dev-web` (Vite proxies `/api`, including WebSockets).
 - **Web**: `cd web && npm ci && npm run build`. **Mobile**: `cd mobile && npm ci && npm run typecheck`. **Recorder**: `cd desktop && python -m pytest`.
-- **CI** (`.github/workflows/meeting-copilot-*.yml` at the repo root) runs backend lint and tests, the web build, the mobile typecheck and bundle, `terraform validate`, and builds the Windows recorder.
+- **CI** (`.github/workflows/ci.yml` and `desktop.yml`) runs backend lint and tests, the web build, the mobile typecheck and bundle, `terraform validate`, and builds the Windows recorder.
 
 ## What was tested, and what wasn't
 

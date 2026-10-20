@@ -10,7 +10,7 @@ speakerphone meetings. Recording only starts when you tap it, after confirming e
 ## Run it
 
 ```bash
-cd services/meeting-copilot/mobile
+cd mobile
 npm install
 npx expo start            # scan the QR code with Expo Go, or press a / i for an emulator
 ```
